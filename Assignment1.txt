@@ -1,0 +1,627 @@
+assignment
+
+
+
+ programme:sum of digits
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace sum_digits
+{
+    class Program
+    {
+        static int sum = 0;
+        static void Main(string[] args)
+        {
+            int sum1 = 0, rem, s;
+            Console.WriteLine("Enter a number");
+            int number = Convert.ToInt32(Console.ReadLine());
+            while (number != 0)
+            {
+                rem = number % 10;
+                sum = sum + rem;
+                number = number / 10;
+
+            }
+
+            s = sum;
+            Console.WriteLine(sum);
+            if (s > 0)
+                while (s != 0)
+                {
+                    rem = s % 10;
+                    sum = s + rem;
+                    number = s / 10;
+                }
+
+
+            Console.WriteLine(sum1);
+            Console.ReadKey();
+        }
+
+
+
+}
+}
+
+programme:Printing first 10 natural numbers
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace natural_num
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("First 10 natural numbers:");
+            
+            int num = 10;
+            for (int i = 1; i <= num;i++)
+            {
+                Console.WriteLine(i);
+
+            }
+            Console.ReadKey();
+        }
+
+}
+}
+    
+
+programme: printing frst natural numbers in reverse order
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace natural_reverse
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("First 10 natural numbers:");
+            
+            int num = 10;
+            for (int i = num; num >=1;num--)
+            {
+                Console.WriteLine(num);
+
+            }
+            Console.ReadKey();
+        }
+
+}
+}
+  
+
+programme:printing first 10 even natural numbers
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+  
+namespace evennatural
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("First 10 natural numbers:");
+
+            
+             for (int i = 1; i <= 10; i++)
+                {
+                    if(i%2==0)
+                    Console.WriteLine(i);
+
+                }
+                Console.ReadKey();
+            }
+        }
+
+}
+
+
+
+
+
+programme:range of values
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Range
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            
+            Console.WriteLine("Range of numbers");
+            Console.WriteLine("enter the range");
+            int strtnum = Convert.ToInt32(Console.ReadLine());
+            int Lstnum = Convert.ToInt32(Console.ReadLine());
+            for(int i = strtnum; i <= Lstnum; i++)
+            { 
+               Console.WriteLine(i);
+        }
+                Console.ReadKey();
+            }
+        }
+
+}
+
+programme:prime num or not
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prime_not
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool isprime =0;
+            Console.WriteLine("Enter a number");
+            int num = Convert.ToInt32(Console.ReadLine());
+            
+                for (i = 2; i <= 100; i++)
+                {
+                                   
+
+                 for (j = 2 j <= 100; i++)
+
+                {
+                if (i != j && j ==0)
+                {
+                    is prime = false;
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\t"+i);
+
+                }
+
+                is true;
+            }
+            Console.ReadKey();
+        }
+        }
+
+}
+
+
+
+
+programme:print prime numbers between 2 to 100
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace primenumbers
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            bool isprime = true;
+            Console.WriteLine("Enter a number");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i <= 100; i++)
+            {
+
+
+                for (int j = 1; j <= 100; j++)
+
+                {
+                    if (i != j && i % j == 0)
+                    {
+                        isprime = false;
+                        break;
+                    }
+
+                }
+                if(isprime)
+                    {
+                        Console.WriteLine("\t" + i);
+
+
+                    }
+
+                isprime=true;
+                    }
+                    Console.ReadKey();
+                }
+            }
+
+        }
+    
+programme: reverse and print of a number
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace reverse_print
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int rev = 0, rem;
+            Console.WriteLine("Enter any number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            
+            while (n != 0) 
+            {
+                rem = n % 10;
+                rev = rev * 10 + rem;
+                n = n / 10;
+            }
+
+           Console.WriteLine("Reverse of  a number:{0}",rev);
+
+            Console.ReadKey(); 
+        }
+    }
+}
+
+
+programme:factorial of a number
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace factorial
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int factorial = 1, count = 0, n;
+            Console.WriteLine("Enter a number");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num == 0)
+            {
+                Console.WriteLine(1);
+
+            }
+            if (num > 0)
+                for (int i = 1; i <= num; i++)
+
+                {
+
+
+
+                    factorial = factorial * i;
+
+                }
+            Console.WriteLine(factorial);
+            n = factorial;
+            if (n > 0)
+
+                for (int i = 1; i <= num; i++)
+                {
+                    if (n % i == 0)
+                    {
+                        count = count + 1;
+
+                    }
+                }
+
+            if (count > 2)
+            {
+                Console.WriteLine("Factorial is not prime");
+
+            }
+            else
+
+            {
+
+                Console.WriteLine("Factorial is prime");
+            }
+
+            Console.ReadKey();
+    }
+}
+}    
+
+
+
+
+
+
+programme:palindrome number
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Palindrome
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            int rev = 0, rem,givennum,revnum;
+            Console.WriteLine("Enter any number");
+            int n = Convert.ToInt32(Console.ReadLine());
+            givennum = n;
+            while (n != 0)
+            {
+                rem = n % 10;
+                rev = rev * 10 + rem;
+                n = n / 10;
+            }
+            revnum = rev;
+            if (givennum == revnum)
+            {
+                Console.WriteLine("given number is palindrome");
+            }
+            else
+            {
+
+                Console.WriteLine("given number is not palindrome");
+            }
+
+            
+
+            Console.ReadKey();
+        }
+    }
+}
+        
+programme:string calculation 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace strings
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            String str = "Hello World";
+            int[] freq = new int[str.Length];
+            int i, j;
+
+             
+            char[] string1 = str.ToCharArray();
+
+            for (i = 0; i < str.Length; i++)
+            {
+                freq[i] = 1;
+                for (j = i + 1; j < str.Length; j++)
+                {
+                    if (string1[i] == string1[j])
+                    {
+                        freq[i]++;
+
+                        
+                        string1[j] = '0';
+                    }
+                }
+            }
+
+            Console.WriteLine("Characters and their corresponding frequencies");
+            for (i = 0; i < freq.Length; i++)
+            {
+                if (string1[i] != ' ' && string1[i] != '0')
+                    Console.WriteLine(string1[i] + "-" + freq[i]);
+                Console.ReadLine();
+            }
+        }
+    }
+    
+        }
+
+
+
+
+
+
+
+
+programme:removing duplicate values
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+namespace remove_duplicate
+{
+    class Program
+    {
+        static int removeDuplicates(int[] arr, int n)
+        {
+
+           if (n == 0 || n == 1)
+                return n;
+
+            int[] temp = new int[n];
+            int j = 0;
+
+            for (int i = 0; i < n - 1; i++)
+
+                // If current element is not equal  to next element then store that current element 
+                if (arr[i] != arr[i + 1])
+                    temp[j++] = arr[i];
+
+            // Store the last element as whether it is unique or  repeated, it hasn't stored previously 
+
+            temp[j++] = arr[n - 1];
+
+            // Modify original array 
+            for (int i = 0; i < j; i++)
+                arr[i] = temp[i];
+
+            return j;
+        }
+
+        public static void Main(string[] args)
+        {
+            int[] arr = { 1, 2, 2, 3, 4, 4, 4, 5, 5 };
+            int n = arr.Length;
+
+            n = removeDuplicates(arr, n);
+
+            // Print updated array 
+            for (int i = 0; i < n; i++)
+                Console.Write(arr[i] + " ");
+            Console.ReadKey();
+        }
+    } 
+    }
+
+
+
+
+programme:multplication
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Multiplication
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Please enter the number:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < number; i++)
+            {
+
+                int mul = number * i;
+                Console.WriteLine("{0} * {1} = {2}", number, i, mul);
+
+            }
+            Console.ReadKey();
+        }
+    }
+
+}
+
+
+
+
+programme:sorting of array in ascending order
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ascending_order
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = { };
+            int temp = 0;
+
+            
+            Console.WriteLine("Elements of original array: ");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
+
+            
+            for (int i = 0; i < arr.Length; i++)
+
+           Console.ReadLine();
+            {
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[i] > arr[j])
+                    {
+                        temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+
+            Console.WriteLine();
+
+            //Displaying elements of array after sorting  
+            Console.WriteLine("Elements of array sorted in ascending order: ");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i] + " ");
+                Console.ReadKey();
+            }
+        }
+    }
+
+
+
+}
+    
+
+
+
+
