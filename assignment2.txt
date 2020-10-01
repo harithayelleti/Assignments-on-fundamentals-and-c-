@@ -1,0 +1,373 @@
+
+Assignment 2:
+
+programme:string is palindrome or not
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace string_palindrome
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter a string");
+            string s = Console.ReadLine();
+            char[] rev = s.ToCharArray();
+            Array.Reverse(rev);
+            string revs = new string(rev);
+            if (s.Equals(revs))
+            {
+
+                Console.WriteLine("given string is palindrome");
+            }
+            else
+            {
+                Console.WriteLine("given string is not a palindrome");
+            }
+
+
+
+            Console.ReadKey();
+        }
+    }
+
+            
+        }
+
+
+
+programme:print number of days for a month
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace month
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            string month;
+
+
+            Console.Write("enter  month and year:");
+            int year = Convert.ToInt32(Console.ReadLine());
+            month = Console.ReadLine();
+            switch (month)
+            {
+                case "january":
+                case "march":
+                case "may":
+                case "july":
+                case "august":
+                case "october":
+                case "december":
+                    Console.Write("Month  have 31 days.");
+                    break;
+             
+                case "april":
+                case "june":
+                case "september":
+                case "november":
+                    Console.Write("Month have 30 days.");
+                    break;
+              }
+             if(year % 4 == 0 || year % 400 == 0  && year % 100 != 0)
+             switch(month)
+             {
+               case "february":
+                    Console.Write("Month  have 29 days.");
+                    break;
+              }
+              else
+              {
+               Console.Write("Month  have 28 days.");
+                    break;
+              }
+                default:
+                    Console.Write("invalid Month number.Please try again....");
+                    break;
+            }
+            Console.ReadKey();
+        }
+
+
+    }
+}
+
+programme: ncr = ( n! / ( (n-r)! * r!)
+    
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace ConsoleApp16
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+
+            
+            Console.WriteLine("Enter the value of n:");
+            Console.ReadLine();
+            Console.WriteLine("Enter the value of r:");
+            Console.ReadLine();
+            int n = Convert.ToInt32(Console.ReadLine());
+            int r = Convert.ToInt32(Console.ReadLine());
+            int k = n - r;
+            double fact = Factorial(n);
+            double fact1 = Factorial(k);
+            double fact2 = Factorial(r);
+            double res = fact / (fact1 * fact2);
+
+            Console.WriteLine(res);
+            Console.ReadKey();
+        }
+        private static double Factorial(int n)
+        {
+            double f = 1;
+            if(n==0)
+            {
+                return 1;
+            }
+            else
+            {
+                f = f * n * Factorial(n - 1);
+                return f;
+            }
+        }
+    }
+}
+    
+programme: finding largest number in an array
+    
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace ConsoleApp16
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int[] arr1 = new int[100];
+            int i, mx;
+
+            Console.WriteLine("Input the number of elements to be stored in the array :");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Input {0} elements in the array :\n", n);
+            for (i = 0; i < n; i++)
+            {
+                Console.Write("element - {0} : ", i);
+                arr1[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+
+            mx = arr1[0];
+
+
+            for (i = 1; i < n; i++)
+            {
+                if (arr1[i] > mx)
+                {
+                    mx = arr1[i];
+                }
+
+
+
+            }
+            Console.WriteLine("Maximum element is : {0}\n", mx);
+            Console.ReadKey();
+        }
+    }
+}
+
+programme: armstrong number
+ 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Armstrong
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int arms = 153;
+            int check, rem, sum = 0;
+          
+            check = arms;
+
+            while (check != 0)
+            {
+                rem = check % 10;
+                sum = sum + (rem * rem * rem);
+                check = check / 10;
+            }
+                if (sum == arms)
+                {
+                    Console.WriteLine("It is a armstrong number");
+
+                }
+                else
+                {
+                    Console.WriteLine("It is not a armstrong number");
+                    
+                }
+                Console.ReadKey();
+
+            }
+        }
+    }
+
+
+
+programme:print  n terms in the series
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Series
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int d, n = 5;
+            for (int i = 1; i <= n; i++)
+            {
+
+                d = i * i * i;
+                Console.Write(d + ",");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+programme: prime numbers in a series
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Primeseries
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            int i, n,count=0;
+            Console.WriteLine("Enter a number");
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            for (n = 1; n <= num; n++)
+            {
+
+                count = 0;
+                for (i = 1; i <= n; i++)
+
+                {
+                    if (n % i == 0)
+                    {
+                        count = count + 1;
+
+                    }
+
+                }
+                if (count <= 2)
+                {
+                    Console.WriteLine("prime number: {0}", n);
+                }
+                Console.ReadKey();
+            }
+        }
+
+    }
+}
+   
+programme:pattern 1 
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace ConsoleApp16
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            
+            Console.WriteLine("Enter a number");
+            int n= Convert.ToInt32(Console.ReadLine());
+            int i, j;
+
+            for (i = n; i >= 1; i--)
+
+            {
+                for (j = 1; j <= i; ++j)
+                {
+                    Console.Write(j);
+                    Console.Write(" ");
+
+                }
+                Console.WriteLine(" ");
+                
+            }
+
+                Console.ReadKey();
+            }
+        }
+
+    }
+
+   
+ 
+
+  
